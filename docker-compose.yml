@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx:latest
+    container_name: nginx_web
+    ports:
+      - "80:80" # Expose le port 80
+    volumes:
+      # Mappez le dossier 'ontwikkel' ou 'productie' sur le dossier de Nginx
+      - ./ontwikkel:/usr/share/nginx/html:ro
+    restart: always
+
