@@ -8,6 +8,6 @@ services:
       - "80:80" # Expose le port 80
     volumes:
       # Mappez le dossier 'ontwikkel' ou 'productie' sur le dossier de Nginx
-      - ./ontwikkel:/usr/share/nginx/html:ro
+      - ./ontwikkel/html:/usr/share/nginx/html:ro
     restart: always
 
