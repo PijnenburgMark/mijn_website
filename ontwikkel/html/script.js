@@ -4,7 +4,7 @@ let personnes = []; // Tableau pour stocker les données
 
 // Charger les données
 document.getElementById('loadButton').addEventListener('click', async () => {
-  const response = await fetch('data.json');
+  const response = await fetch('../data.json');
   personnes = await response.json();
   afficherPersonnes(personnes);
 
