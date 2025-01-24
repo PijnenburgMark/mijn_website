@@ -1,11 +1,9 @@
 # mijn_website
-Een eenvoudige website met html, css, json en javascript.
+A simpel web site with html, css, json and javascript, run with nginx in a docker container
 
-Het beste kan deze website lokaal gerund worden:
-1. installeer: node.js als dat nog niet op je pc staat,
-2. clonde de github repo naar een lokale map
-3. open een terminal, ga naar die map en run: node app.js
-Vervolgens lanceert node.js een webserver op http://localhost:3000/
-
-Om de website te bekijken via github pages, ga naar: https://PijnenburgMark.github.io/mijn_website
-Maar omdat github pages alleen maar statische websites faciliteert, werken de knoppen niet.
+To run the website:
+1. clone the github repo to your (AWS) server
+2. connect to the server by SSH, go to the cloned rep map and run:
+   docker run --name mijn_nginx -v /home/User_Mark/git/mijn_webs/ontwikkel/html:/usr/share/nginx/html:ro 
+          -p 80:80 -d nginx
+3. Go to the external IP address of the server and enjoy the web site!
