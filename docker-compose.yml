@@ -9,6 +9,5 @@ services:
     volumes:
       # Mappez le dossier 'ontwikkel' ou 'productie' sur le dossier de Nginx
       - ./ontwikkel/html:/usr/share/nginx/html:ro
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
     restart: always
 

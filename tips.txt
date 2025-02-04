@@ -1,0 +1,6 @@
+Om te testen of de Flask API-server het doet (na lanceren via python3 app.py in een apart 
+screen dat je daarna kunt detachen), type:
+curl http://localhost:5000/api/personnes
+
+Om de AWS RDS database te berieken via de AWS EC2, type:
+psql -h database-1.cfa4s4ys0wra.eu-central-1.rds.amazonaws.com -d personen -p 5432 -U postgres
