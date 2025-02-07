@@ -4,7 +4,8 @@ let personnes = []; // Tableau pour stocker les données
 
 // Charger les données depuis l'API
 document.getElementById('loadButton').addEventListener('click', async () => {
-  const response = await fetch('http://ec2-52-28-23-26.eu-central-1.compute.amazonaws.com:5000/api/personnes');
+  //const response = await fetch('http://ec2-52-28-23-26.eu-central-1.compute.amazonaws.com:5000/api/personnes');
+  const response = await fetch('/api/personnes');
   if (!response.ok){
     throw new Error(`Erreur HTTP: ${response.status}`);
   }

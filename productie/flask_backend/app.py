@@ -21,7 +21,7 @@ def get_db_connection():
         port=DB_PORT
     )
 
-@app.route('/api/personnes', methods=['GET'])
+@app.route('/personnes', methods=['GET'])
 def get_personnes():
     conn = get_db_connection()
     cur = conn.cursor()
